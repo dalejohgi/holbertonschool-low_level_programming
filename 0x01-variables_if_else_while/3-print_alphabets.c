@@ -16,7 +16,10 @@ int main(void)
 }
 
 	while (AZ <= 'Z')
-
+{
+	putchar(AZ);
+	AZ++;
+}
 {
 	putchar('\n');
 }
