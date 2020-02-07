@@ -6,19 +6,19 @@
  */
 int main(void)
 {
-	int az = '0';
-	int s = ' ';
-	int c = ',';
+	int comb;
 
-	while (az <= '9')
+	for (comb = 48; comb <= 57; comb++)
 	{	
-	putchar(az);
-		if (az < '9')
+	putchar(comb);
+		if (comb != 57)
 		{
-		putchar(c);
-		putchar(s);
+		putchar(',');
+		putchar(' ');
 		}
-	az++;
+	}
+	{
+	putchar('\n');
 	}
 return (0);
 }
