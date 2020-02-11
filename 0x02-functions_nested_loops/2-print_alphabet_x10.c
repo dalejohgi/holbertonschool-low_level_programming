@@ -10,7 +10,7 @@ void print_alphabet_x10(void)
 	char s[] = "abcdefghijklmnopqrstuvwxyz";
 	int l = 0;
 
-	while (l <= 10)
+	while (l <= 9)
 	{
 	i = 0;
 		while (i <= 25)
