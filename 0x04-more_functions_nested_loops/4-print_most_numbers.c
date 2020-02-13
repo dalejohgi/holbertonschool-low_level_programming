@@ -6,13 +6,20 @@
  */
 void print_most_numbers(void)
 {
-	char n[] = "01356789";
+
 	int i = 0;
 
 	while (i < 10)
 	{
-	_putchar(n[i]);
+	if (i != 2 && i!= 4)
+	{
+	_putchar('0' + i);
 	i++;
+	}
+	else
+	{
+	i++;
+	}
 	}
 	_putchar('\n');
 
