@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- *print_diagonal - Function to print o to 9 numbers
- *@n: variable
+ *print_square - Function to print o to 9 numbers
+ *@size: variable
  *
  */
 void print_square(int size)
