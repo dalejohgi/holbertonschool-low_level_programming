@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  *rev_string - Function to print a reversed string?
  *@s: Variable
@@ -7,18 +6,21 @@
  */
 void rev_string(char *s)
 {
-	int b, x = 0;
-	int a = _strlen(s) - 1;
-	char z[100];
+	int i = 0;
+	int m = 0;
+	char t;
 
-	for (b = a; b >= 0 ; b--)
+	while (s[i] != '\0')
 	{
-		z[x] = s[b];
-		x++;
-
+		i++;
 	}
-	for (b = 0; b <= a; b++)
+	--i;
+	while (m < i)
 	{
-		s[b] = z[b];
+		t = s[i];
+		s[i] = s[m];
+		s[m] = t;
+		m++;
+		i--;
 	}
 }
