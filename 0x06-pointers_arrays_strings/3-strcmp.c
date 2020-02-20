@@ -14,11 +14,13 @@ int _strcmp(char *s1, char *s2)
 	{
 		i++;
 	}
+	--i;
 	n = 0;
 	while (s2[n] != '\0')
 	{
 		n++;
 	}
+	--n;
 	if (i < n)
 	{
 		return (-15);
