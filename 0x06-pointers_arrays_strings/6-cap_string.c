@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *string_toupper - Function to change lower case to upper case
+ *cap_string - Function to change lower case to upper case in every new word
  *@s: String
  *Return: New string
  */
@@ -10,15 +10,22 @@ char *cap_string(char *s)
 
 	while (s[i] != '\0')
 {
-		if (s[i] == 13 || s[i] == 32 || s[i] == 9 || s[i] == 10 || s[i] == 11 || s[i] == 44 || s[i] == 59 || s[i] == 46 || s[i] == 33 || s[i] == 63 || s[i] == 34 || s[i] == 40 || s[i] == 41 || s[i] == 123 || s[i] == 125)
+		if (s[i] == 13 || s[i] == 32 || s[i] == 9 || s[i] == 10 || s[i] == 11 ||
+		 s[i] == 44 || s[i] == 59 || s[i] == 46 || s[i] == 33 || s[i] == 63 ||
+		s[i] == 34 || s[i] == 40 || s[i] == 41 || s[i] == 123 || s[i] == 125)
+		{
+		while (s[i] == 13 || s[i] == 32 || s[i] == 9 || s[i] == 10 || s[i] == 11 ||
+			s[i] == 44 || s[i] == 59 || s[i] == 46 || s[i] == 33 || s[i] == 63 ||
+			s[i] == 34 || s[i] == 40 || s[i] == 41 || s[i] == 123 || s[i] == 125)
 		{
 		++i;
-		
-		
+
+
 			if (s[i] >= 97 && s[i] <= 122)
 			{
 			s[i] = s[i] - 32;
 			}
+		}
 		}
 	i++;
 	}
