@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-    char *s = "hello";
+    char *s = "hennn";
     char *f;
 
     f = _strchr(s, 'l');
@@ -16,6 +16,10 @@ int main(void)
     if (f != NULL)
     {
         printf("%s\n", f);
+    }
+    else 
+    {
+	printf("Junciona");
     }
     return (0);
 }
