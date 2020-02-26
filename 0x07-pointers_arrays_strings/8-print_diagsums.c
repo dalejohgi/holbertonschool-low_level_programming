@@ -18,12 +18,12 @@ void print_diagsums(int *a, int size)
 	for (i = 0; i < size; i++)
 	{
 		p = (i * size) + i;
-		y += *(a + p);
+		x += *(a + p);
 	}
 	for (j = 0; j < size; j++)
 	{
 		p = (j * size) + (size - 1 - j);
-		x += *(a + p);
+		y += *(a + p);
 	}
 	printf("%i, %i\n", x, y);
 }
