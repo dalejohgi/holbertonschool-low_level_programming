@@ -1,3 +1,4 @@
+#define HOLBERTON_H
 int _putchar(char c);
 void print_alphabet(void);
 void print_alphabet_x10(void);
@@ -53,3 +54,4 @@ int _scanroot(int n, int i);
 int is_prime_number(int n);
 int scan_prime(int a, int n);
 int _atoi(char *s);
+#endif
