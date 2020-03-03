@@ -15,17 +15,17 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0) /**Condicion del ejercicio*/
 	{
-	return (NULL);
+		return (NULL);
 	}
 	s =  malloc(sizeof(char) * size); /**array s con size elementos*/
+	if (s == NULL) /**Evita un segfault*/
+	{
+		return (NULL);
+	}
 	while (i < size) /**Ciclo para llenar *(s + i) con el valor de c*/
 	{
 		s[i] = c;
 		i++;
-	}
-	if (s == NULL) /**Evita un segfault*/
-	{
-	return (NULL);
 	}
 s[i] = '\0';
 return (s); /** Retorna puntero a mi string */
