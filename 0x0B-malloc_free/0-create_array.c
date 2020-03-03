@@ -10,14 +10,14 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	char *s = malloc(sizeof(char) * size); /**array s con size elementos*/
+	char *s;
 	unsigned int i = 0; /**El contador para poner c en cada posicion */
 
 	if (size == 0) /**Condicion del ejercicio*/
 	{
 	return (NULL);
 	}
-
+	s =  malloc(sizeof(char) * size); /**array s con size elementos*/
 	while (i < size) /**Ciclo para llenar *(s + i) con el valor de c*/
 	{
 		s[i] = c;
