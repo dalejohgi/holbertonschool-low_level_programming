@@ -15,7 +15,7 @@ char *create_array(unsigned int size, char c)
 
 	while (i < size) /**Ciclo para llenar *(s + i) con el valor de c*/
 	{
-		*(s + i) = c;
+		s[i] = c;
 		i++;
 	}
 	if (size == 0) /**Condicion del ejercicio*/
