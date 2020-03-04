@@ -24,7 +24,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-
 	while (s1[size1])
 	{
 		size1++;
@@ -34,7 +33,6 @@ char *str_concat(char *s1, char *s2)
 		size2++;
 	}
 	s3 = malloc(sizeof(char) * (size1 + size2 + 1));
-
 	if (s3 == NULL)
 	{
 		return (NULL);
