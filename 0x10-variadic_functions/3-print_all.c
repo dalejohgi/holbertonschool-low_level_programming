@@ -18,7 +18,10 @@ void print_all(const char * const format, ...)
 	va_start(arg, format);
 	while (format[i] && format)
 	{
-		printf("%s", separator);
+		if(separator)
+			printf("%s", separator);
+		else
+			printf("(nil)");
 		switch (format[i])
 		{
 			case 'c':
