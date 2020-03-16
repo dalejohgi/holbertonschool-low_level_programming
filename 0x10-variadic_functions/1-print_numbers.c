@@ -29,4 +29,16 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("\n");
 		va_end(numbers);
 	}
+	else
+	 {
+                va_start(numbers, n);
+                while (i <= n)
+                {
+                        num = va_arg(numbers, int);
+                        printf("%d", num);
+                        i++;
+                }
+                printf("\n");
+                va_end(numbers);
+        }
 }
