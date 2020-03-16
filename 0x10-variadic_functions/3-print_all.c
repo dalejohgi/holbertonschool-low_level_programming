@@ -26,10 +26,7 @@ void print_all(const char * const format, ...)
 				separator = ", ";
 				break;
 			case 's':
-				if ('s')
-					printf("%s", va_arg(arg, char *));
-				else
-					printf("(nil)");
+				printf("%s", va_arg(arg, char *));
 				separator = ", ";
 				break;
 			case 'f':
