@@ -1,4 +1,4 @@
-#include <stdid.h>
+#include <stdio.h>
 void dofirst(void) __attribute__ ((constructor));
 /**
  *dofirst - Print a sentence
