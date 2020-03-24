@@ -35,14 +35,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		node->n = n;
 		node->next = *head;
-		searcher->next = node;
+		*head = node;
 			return (node);
 	}
-	else
-	{
 	node->n = n;
 	node->next = searcher->next;
 	searcher->next = node;
 		return (node);
-	}
 }
