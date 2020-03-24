@@ -11,6 +11,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	unsigned int comparator = 0;
 	listint_t *searcher, *node;
 
+	if (head == NULL)
+		return (NULL);
+
 	searcher = *head;
 	while (searcher != NULL && comparator != idx - 1)
 	{
