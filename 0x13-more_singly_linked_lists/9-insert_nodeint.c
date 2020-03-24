@@ -14,22 +14,35 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (head == NULL)
 		return (NULL);
 
-	searcher = *head;
-	while (searcher != NULL && comparator != idx - 1)
+	if (idx != 0)
 	{
-		searcher = searcher->next;
-		comparator++;
+		searcher = *head;
+		while (searcher != NULL && comparator != idx - 1)
+		{
+			searcher = searcher->next;
+			comparator++;
+		}
+		if (searcher == NULL)
+			return (NULL);
 	}
-	if (searcher == NULL)
-		return (NULL);
 
 	node = malloc(sizeof(listint_t));
 
 	if (node == NULL)
 		return (NULL);
 
+	if (idx == 0)
+	{
+		node->n = n;
+		node->next = *head;
+		searcher->next = node;
+			return (node);
+	}
+	else
+	{
 	node->n = n;
 	node->next = searcher->next;
 	searcher->next = node;
-	return (node);
+		return (node);
+	}
 }
