@@ -12,7 +12,9 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	listint_t *nth;
 
 	if (head == NULL)
-		return(NULL)
+	{
+		return (NULL);
+	}
 
 	nth = head;
 	while (nth->next != NULL && comparator != index)
