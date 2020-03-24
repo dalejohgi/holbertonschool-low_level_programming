@@ -10,6 +10,9 @@ int pop_listint(listint_t **head)
 	int value;
 	listint_t *saver;
 
+	if (head == NULL)
+		return (0);
+
 	value = (*head)->n;
 	saver = (*head)->next;
 	free(*head);
