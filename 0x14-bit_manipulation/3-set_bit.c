@@ -18,7 +18,10 @@ int set_bit(unsigned long int *n, unsigned int index)
 		i++;
 	}
 	if ((*n & 1) == 1)
+	{
+		*n <<= (i);
 		return (1);
+	}
 
 	*n = *n + 1;
 	*n <<= (i);
