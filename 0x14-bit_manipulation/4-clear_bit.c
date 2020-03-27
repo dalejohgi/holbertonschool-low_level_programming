@@ -1,11 +1,11 @@
 #include "holberton.h"
 /**
- *set_bit - Set a bit in a index position
+ *clear_bit - Clear a bit in a index position
  *@n: Pointer to number to scan
- *@index: Position to set the bit
+ *@index: Position to clear the bit
  *Return: 1 if success -1 if fails
  */
-int set_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int i = 0;
 
@@ -18,9 +18,10 @@ int set_bit(unsigned long int *n, unsigned int index)
 		i++;
 	}
 	if ((*n & 1) == 1)
+	{
+		*n = *n - 1;
+		*n <<= (i);
 		return (1);
-
-	*n = *n + 1;
-	*n <<= (i);
+	}
 	return (1);
 }
