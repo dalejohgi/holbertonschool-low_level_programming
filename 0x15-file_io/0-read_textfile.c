@@ -14,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd; /**file descriptor 0 1 2 o -1*/
 	char *buf; /**pointer to where the text is gonna be allocated*/
-	ssize_t size, wrote, closed;
+	ssize_t size, wrote;
 
 	if (filename == NULL)
 		return (0);
@@ -29,21 +29,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-
 	size = read(fd, buf, letters);
 	if (size == -1)
+	{
+		free(buf);
 		return (0);
-
+	}
 	wrote = write(STDOUT_FILENO, buf, letters);
 	if (wrote == -1)
 	{
 		free(buf);
 		return (0);
 	}
-
-	closed = close(fd);
-	if (closed == -1)
-		return (0);
+	close(fd);
 	free(buf);
 	return (size);
 }
