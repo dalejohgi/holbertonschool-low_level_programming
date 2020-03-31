@@ -12,8 +12,8 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	char buf[10000];
+	int fd; /**file descriptor 0 1 2 o -1*/
+	char *buf; /**pointer to where the text is gonna be allocated*/
 	ssize_t size, wrote;
 
 	if (filename == NULL)
@@ -21,9 +21,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	fd = open(filename, O_RDWR);
 
-	if (fd == -1)
+	if (fd == -1) /**fd is -1 when fails*/
 		return (0);
-
+	buf = malloc(sizeof(char) * letters);
 	size = read(fd, buf, letters);
 	if (size == -1)
 		return (0);
@@ -33,5 +33,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	close(fd);
+	free(buf);
 	return (size);
 }
