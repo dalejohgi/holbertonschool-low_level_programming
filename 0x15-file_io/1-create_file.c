@@ -3,7 +3,7 @@
  *create_file - Creates a file and write text in it
  *@filename: Name of the file
  *@text_content: text to be index
- *Return 1 if success, -1 if fails
+ *Return: 1 if success, -1 if fails
  */
 int create_file(const char *filename, char *text_content)
 {
